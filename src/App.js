@@ -22,7 +22,7 @@ class App extends Component {
   handleAuth(){
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider)
-    .then(result => console.log(`${result.user.email} logged`))
+    .then(result => console.log(`${result.user.email} logged in`))
     .catch(error => console.log(`Error: ${error.code}: ${error.message}`));
   }
 
